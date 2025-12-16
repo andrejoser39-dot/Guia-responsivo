@@ -4,9 +4,7 @@ body {
   padding: 20px;
   text-align: center;
   background-color: #ffffcc;
-  /* Amarillo pálido (Móvil por defecto) */
   transition: background-color 0.5s ease;
-  /* Transición para un cambio suave de color */
 }
 
 h1 {
@@ -14,16 +12,13 @@ h1 {
 }
 
 .main-container {
-  /* Estilos Mobile First: Los elementos se apilan por defecto (Flexbox por defecto es column) */
   display: flex;
   flex-direction: column;
   padding: 10px;
   gap: 15px;
-  /* Espacio entre las cajas */
 }
 
 .caja {
-  /* Estilos Mobile First: Las cajas ocupan el ancho completo */
   width: 100%;
   padding: 40px 20px;
   background-color: #00c6f7;
@@ -35,7 +30,6 @@ h1 {
   font-weight: bold;
 }
 
-/* Colores distintivos para las cajas */
 .caja-1 {
   background-color: #e67e22;
   color: white;
@@ -62,47 +56,78 @@ h1 {
   transition: width 0.5s ease;
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    background-color: #ccf2ff;
+  }
 
-.main-container {
-  /* Cambio de disposición: Las cajas se colocan lado a lado */
-  flex-direction: row;
-  flex-wrap: wrap;
-  /* Permite que las cajas se envuelvan si no caben */
-  padding: 20px;
-  max-width: 900px;
-  /* Limita el ancho del contenedor en pantallas grandes */
-  margin: 20px auto;
+  .contenedor {
+    width: 70%;
+  }
 }
 
-.caja {
-  /* Las cajas ocupan un tercio del ancho (menos el espacio entre ellas) */
-  width: calc(33.33% - 15px);
-  padding: 30px 10px;
-}
+@media (min-width: 992px) and (max-width: 1199px) {
+  body {
+    background-color: #ccffcc;
+  }
+
+  .contenedor {
+    width: 50%;
+  }
 }
 
+@media (min-width: 1200px) {
+  body {
+    background-color: #ffcccc;
+  }
 
-.main-container {
-  /* En escritorio, forzamos la Caja 2 al centro usando orden */
-  justify-content: space-between;
-  max-width: 1200px;
+  .contenedor {
+    width: 30%;
+  }
 }
 
-.caja-2 {
-  /* En escritorio, la Caja 2 puede ser visualmente más ancha */
-  width: calc(40% - 15px);
+@media (min-width: 600px) {
+
+  body {
+    background-color: #eaf2f8;
+  }
+
+  .main-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+  }
+
+  .caja {
+    width: calc(33.33% - 15px);
+    padding: 30px 10px;
+  }
 }
 
-.caja-1,
-.caja-3 {
-  width: calc(30% - 15px);
-}
-}
+@media (min-width: 1024px) {
 
-/* ======================================================== */
-/* 1. ESTILOS BASE (MOBILE FIRST: < 600px)                  */
-/* Establecemos los tamaños más pequeños por defecto        */
-/* ======================================================== */
+  body {
+    background-color: #d6eaf8;
+  }
+
+  .main-container {
+
+    justify-content: space-between;
+    max-width: 1200px;
+  }
+
+  .caja-2 {
+
+    width: calc(40% - 15px);
+  }
+
+  .caja-1,
+  .caja-3 {
+    width: calc(30% - 15px);
+  }
+}
 
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -126,102 +151,40 @@ h1 {
 @media (min-width: 600px) {
 
   body {
-    background-color: #eaf2f8;
-    /* Cambia ligeramente el fondo */
+    background-color: #000000;
   }
 
-  /* Breakpoint 2: Escritorio (1024px o más) */
-  @media (min-width: 1024px) {
+  h1 {
+    font-size: 2.5em;
+  }
 
-    body {
-      background-color: #d6eaf8;
-      /* Fondo más distintivo para escritorio */
-    }
-
-    @media (min-width: 600px) {
-
-      body {
-        background-color: #000000;
-      }
-
-      h1 {
-        /* Aumentamos el tamaño del título para tabletas */
-        font-size: 2.5em;
-      }
-
-      .texto-adaptativo {
-        /* Aumentamos ligeramente el cuerpo del texto */
-        font-size: 1.1em;
-      }
-    }
-
-    /* Breakpoint 2: Tableta grande/Escritorio pequeño (900px o más) */
-    @media (min-width: 900px) {
-
-      body {
-        background-color: #ccf2ff;
-      }
-
-      h1 {
-        /* Tamaño de fuente más grande para mejorar la experiencia de escritorio */
-        font-size: 3.2em;
-      }
-
-      .texto-adaptativo {
-        /* Más espacio, mayor fuente para mejorar la lectura */
-        font-size: 1.25em;
-      }
-    }
-
-    /* Breakpoint 3: Escritorio grande (1200px o más) */
-    @media (min-width: 1200px) {
-
-      body {
-        background-color: #99e6ff;
-      }
-
-      h1 {
-        /* Tamaño máximo para pantallas muy grandes */
-        font-size: 4em;
-      }
-    }
+  .texto-adaptativo {
+    font-size: 1.1em;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 900px) {
+
   body {
     background-color: #ccf2ff;
-    /* Azul claro pálido */
   }
 
-  .contenedor {
-    width: 70%;
-    /* Cambia a 70% de ancho */
-  }
-}
-
-/* Breakpoint 3: Escritorio mediano (992px a 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-  body {
-    background-color: #ccffcc;
-    /* Verde claro pálido */
+  h1 {
+    font-size: 3.2em;
   }
 
-  .contenedor {
-    width: 50%;
-    /* Cambia a 50% de ancho */
+  .texto-adaptativo {
+    font-size: 1.25em;
   }
 }
 
-/* Breakpoint 4: Escritorio grande (1200px o más) */
 @media (min-width: 1200px) {
+
   body {
-    background-color: #ffcccc;
-    /* Rosa pálido */
+    background-color: #99e6ff;
   }
 
-  .contenedor {
-    width: 30%;
-    /* Cambia a 30% de ancho */
+  h1 {
+    font-size: 4em;
   }
 }
