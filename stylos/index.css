@@ -1,0 +1,227 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  background-color: #ffffcc;
+  /* Amarillo pálido (Móvil por defecto) */
+  transition: background-color 0.5s ease;
+  /* Transición para un cambio suave de color */
+}
+
+h1 {
+  color: #333;
+}
+
+.main-container {
+  /* Estilos Mobile First: Los elementos se apilan por defecto (Flexbox por defecto es column) */
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 15px;
+  /* Espacio entre las cajas */
+}
+
+.caja {
+  /* Estilos Mobile First: Las cajas ocupan el ancho completo */
+  width: 100%;
+  padding: 40px 20px;
+  background-color: #00c6f7;
+  /* Gris claro */
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Colores distintivos para las cajas */
+.caja-1 {
+  background-color: #e67e22;
+  color: white;
+}
+
+.caja-2 {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.caja-3 {
+  background-color: #9b59b6;
+  color: white;
+}
+
+.contenedor {
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: width 0.5s ease;
+}
+
+
+.main-container {
+  /* Cambio de disposición: Las cajas se colocan lado a lado */
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* Permite que las cajas se envuelvan si no caben */
+  padding: 20px;
+  max-width: 900px;
+  /* Limita el ancho del contenedor en pantallas grandes */
+  margin: 20px auto;
+}
+
+.caja {
+  /* Las cajas ocupan un tercio del ancho (menos el espacio entre ellas) */
+  width: calc(33.33% - 15px);
+  padding: 30px 10px;
+}
+}
+
+
+.main-container {
+  /* En escritorio, forzamos la Caja 2 al centro usando orden */
+  justify-content: space-between;
+  max-width: 1200px;
+}
+
+.caja-2 {
+  /* En escritorio, la Caja 2 puede ser visualmente más ancha */
+  width: calc(40% - 15px);
+}
+
+.caja-1,
+.caja-3 {
+  width: calc(30% - 15px);
+}
+}
+
+/* ======================================================== */
+/* 1. ESTILOS BASE (MOBILE FIRST: < 600px)                  */
+/* Establecemos los tamaños más pequeños por defecto        */
+/* ======================================================== */
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 20px;
+  padding: 0;
+  background-color: #f0f8ff;
+  transition: all 0.5s ease;
+}
+
+h1 {
+  font-size: 1.8em;
+  color: #004d99;
+}
+
+.texto-adaptativo {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 600px) {
+
+  body {
+    background-color: #eaf2f8;
+    /* Cambia ligeramente el fondo */
+  }
+
+  /* Breakpoint 2: Escritorio (1024px o más) */
+  @media (min-width: 1024px) {
+
+    body {
+      background-color: #d6eaf8;
+      /* Fondo más distintivo para escritorio */
+    }
+
+    @media (min-width: 600px) {
+
+      body {
+        background-color: #000000;
+      }
+
+      h1 {
+        /* Aumentamos el tamaño del título para tabletas */
+        font-size: 2.5em;
+      }
+
+      .texto-adaptativo {
+        /* Aumentamos ligeramente el cuerpo del texto */
+        font-size: 1.1em;
+      }
+    }
+
+    /* Breakpoint 2: Tableta grande/Escritorio pequeño (900px o más) */
+    @media (min-width: 900px) {
+
+      body {
+        background-color: #ccf2ff;
+      }
+
+      h1 {
+        /* Tamaño de fuente más grande para mejorar la experiencia de escritorio */
+        font-size: 3.2em;
+      }
+
+      .texto-adaptativo {
+        /* Más espacio, mayor fuente para mejorar la lectura */
+        font-size: 1.25em;
+      }
+    }
+
+    /* Breakpoint 3: Escritorio grande (1200px o más) */
+    @media (min-width: 1200px) {
+
+      body {
+        background-color: #99e6ff;
+      }
+
+      h1 {
+        /* Tamaño máximo para pantallas muy grandes */
+        font-size: 4em;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    background-color: #ccf2ff;
+    /* Azul claro pálido */
+  }
+
+  .contenedor {
+    width: 70%;
+    /* Cambia a 70% de ancho */
+  }
+}
+
+/* Breakpoint 3: Escritorio mediano (992px a 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  body {
+    background-color: #ccffcc;
+    /* Verde claro pálido */
+  }
+
+  .contenedor {
+    width: 50%;
+    /* Cambia a 50% de ancho */
+  }
+}
+
+/* Breakpoint 4: Escritorio grande (1200px o más) */
+@media (min-width: 1200px) {
+  body {
+    background-color: #ffcccc;
+    /* Rosa pálido */
+  }
+
+  .contenedor {
+    width: 30%;
+    /* Cambia a 30% de ancho */
+  }
+}
