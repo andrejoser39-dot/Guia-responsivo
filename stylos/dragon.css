@@ -28,16 +28,14 @@
 }
 
 .grid-container {
-
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 4px;
 }
 
 .grid-item {
   background: linear-gradient(to bottom right, #0026ce, #000000);
   overflow: hidden;
-
 }
 
 .grid-item img {
@@ -51,6 +49,7 @@
 .grid-item:hover img {
   transform: scale(1.05);
 }
+
 
 @media (min-width: 600px) {
 

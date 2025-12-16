@@ -8,22 +8,81 @@
   <title>Diseño Adaptativo con Media Queries</title>
   <link rel="stylesheet" href="stylos/index.css">
 </head>
-<section>
 
   <body>
     <div class="contenedor-principal">
       <div class="caja">
         <h2>Contenedor de Contenido</h2>
         <p>Este es el elemento cuya disposición cambia con el tamaño de la pantalla.</p>
-        <p>El **color de fondo** de la página y el **ancho** de este contenedor cambian automáticamente cuando
-          redimensionas la ventana del navegador.</p>
       </div>
       <div class="caja">Caja 2</div>
       <div class="caja">Caja 3</div>
       <div class="caja">Caja 4</div>
     </div>
+    <div class="responsive-content">
+      <h1>SAIYAN</h1>
+        <p class="intro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, quam optio assumenda delectus nostrum ipsum reprehenderit architecto consequatur voluptatum nam voluptatem voluptatibus veritatis obcaecati, quo ad magni dicta eveniet odit!.</p>
+    </div>
+  </body>
+<section>
+  <form class="responsive-form">
+    <h2>Registro de Guerreros Z</h2>
+
+    <div class="form-group">
+        <label for="name">Nombre de Guerrero:</label>
+        <input type="text" id="name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="power-level">Nivel de Poder (Estimado):</label>
+        <input type="number" id="power-level" required>
+    </div>
+
+    <div class="field-row">
+        <div class="form-group">
+            <label for="origin">Planeta de Origen:</label>
+            <select id="origin">
+                <option>Tierra</option>
+                <option>Planeta Vegeta</option>
+                <option>Namek</option>
+                <option>Otro</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="transformation">Máxima Transformación:</label>
+            <input type="text" id="transformation">
+        </div>
+    </div>
+    
+    <div class="form-group full-width">
+        <label for="comments">Observaciones:</label>
+        <textarea id="comments"></textarea>
+    </div>
+
+    <button type="submit" class="submit-button">Registrar</button>
+</form>
 </section>
 <section>
+  <div>
+    <div class="card-container">
+    <div class="card">
+        <h3>Goku Super Saiyan</h3>
+        <p>El héroe principal de Dragon Ball Z. Su primera transformación en Namek fue épica.</p>
+        <img src="./recusos/goku_normal.webp" alt="Goku Super Saiyan">
+    </div>
+    <div class="card">
+        <h3>Vegeta (Majin)</h3>
+        <p>El Príncipe Saiyan, rival de Goku. Su orgullo lo llevó a su forma Majin.</p>
+        <img src="./recusos/vegeta_normal.webp" alt="Vegeta Majin">
+    </div>
+    <div class="card">
+        <h3>Gohan Definitivo</h3>
+        <p>El hijo de Goku. Desbloqueó su potencial oculto sin la necesidad de transformaciones.</p>
+        <img src="./recusos/gohan.webp" alt="Gohan Definitivo">
+    </div>
+</div>
+  </div>
   <li>
     <a href="blogs/blog.html">blogs</a>
   </li>
