@@ -8,51 +8,42 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   background-color: #e8f8f5;
-  /* Fondo claro para escritorio */
   color: #333;
   text-align: center;
 }
 
 header {
   background-color: #1abc9c;
-  /* Turquesa */
   color: white;
   padding: 20px 0;
 }
 
 .main-grid {
-  /* Estilos Desktop First: Usamos Grid para una disposición de 3 columnas */
   display: grid;
   max-width: 1200px;
   margin: 30px auto;
   gap: 20px;
   padding: 15px;
 
-  /* Definición de 3 columnas con un ancho específico */
   grid-template-columns: 250px 1fr 300px;
 
-  /* Asignación de áreas a las cajas */
   grid-template-areas: "sidebar main secondary";
   height: 600px;
-  /* Altura de ejemplo */
 }
 
 .caja-a {
   grid-area: sidebar;
   background-color: #f1c40f;
-  /* Amarillo */
 }
 
 .caja-b {
   grid-area: main;
   background-color: #3498db;
-  /* Azul */
 }
 
 .caja-c {
   grid-area: secondary;
   background-color: #e74c3c;
-  /* Rojo */
 }
 
 .caja {
@@ -73,53 +64,39 @@ footer {
 }
 
 
-/* Breakpoint 1: Tableta (Máximo 1199px) */
 @media (max-width: 1199px) {
-
-  /* Cambiamos a un layout de 2 columnas principales (quitando la barra lateral) */
   .main-grid {
     grid-template-columns: 1fr 300px;
-    /* Contenido principal y secundaria */
     grid-template-areas:
       "main secondary"
       "sidebar sidebar";
-    /* La barra lateral ahora va abajo */
     height: auto;
-    /* Altura flexible */
   }
 
   .caja-a {
-    /* Mejorar la presentación del elemento movido */
     padding: 10px 20px;
     text-align: center;
   }
 }
 
-/* Breakpoint 2: Móvil (Máximo 767px) */
 @media (max-width: 767px) {
 
   body {
     background-color: #000000;
-    /* Fondo muy simple para móvil */
   }
 
   .main-grid {
-    /* Cambio de disposición: Se apilan verticalmente (1 columna) */
     grid-template-columns: 1fr;
     grid-template-areas:
       "main"
-      /* El contenido principal va primero */
       "secondary"
-      /* Secundaria va segundo */
       "sidebar";
-    /* La barra lateral va al final */
     padding: 10px;
   }
 
   .caja {
     text-align: center;
     margin-bottom: 10px;
-    /* Añade más separación en móvil */
     padding: 25px 15px;
   }
 }
@@ -129,18 +106,15 @@ body {
   margin: 20px;
   padding: 0;
   background-color: #f0f8ff;
-  /* Azul muy claro */
   transition: all 0.5s ease;
 }
 
 h1 {
-  /* Tamaño de fuente móvil base */
   font-size: 1.8em;
   color: #004d99;
 }
 
 .texto-adaptativo {
-  /* Tamaño de fuente para el cuerpo del texto móvil */
   font-size: 1em;
   line-height: 1.5;
   margin-bottom: 20px;
@@ -153,17 +127,14 @@ h1 {
   }
 
   h1 {
-    /* Aumentamos el tamaño del título para tabletas */
     font-size: 2.5em;
   }
 
   .texto-adaptativo {
-    /* Aumentamos ligeramente el cuerpo del texto */
     font-size: 1.1em;
   }
 }
 
-/* Breakpoint 2: Tableta grande/Escritorio pequeño (900px o más) */
 @media (min-width: 900px) {
 
   body {
@@ -171,17 +142,14 @@ h1 {
   }
 
   h1 {
-    /* Tamaño de fuente más grande para mejorar la experiencia de escritorio */
     font-size: 3.2em;
   }
 
   .texto-adaptativo {
-    /* Más espacio, mayor fuente para mejorar la lectura */
     font-size: 1.25em;
   }
 }
 
-/* Breakpoint 3: Escritorio grande (1200px o más) */
 @media (min-width: 1200px) {
 
   body {
@@ -189,7 +157,6 @@ h1 {
   }
 
   h1 {
-    /* Tamaño máximo para pantallas muy grandes */
     font-size: 4em;
   }
 }

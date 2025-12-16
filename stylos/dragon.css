@@ -56,15 +56,12 @@
 
   body {
     background-color: #eaf2f8;
-    /* Cambia ligeramente el fondo */
   }
 
-  /* Breakpoint 2: Escritorio (1024px o más) */
   @media (min-width: 1024px) {
 
     body {
       background-color: #d6eaf8;
-      /* Fondo más distintivo para escritorio */
     }
 
     @media (min-width: 600px) {
@@ -74,17 +71,14 @@
       }
 
       h1 {
-        /* Aumentamos el tamaño del título para tabletas */
         font-size: 2.5em;
       }
 
       .texto-adaptativo {
-        /* Aumentamos ligeramente el cuerpo del texto */
         font-size: 1.1em;
       }
     }
 
-    /* Breakpoint 2: Tableta grande/Escritorio pequeño (900px o más) */
     @media (min-width: 900px) {
 
       body {
@@ -92,17 +86,14 @@
       }
 
       h1 {
-        /* Tamaño de fuente más grande para mejorar la experiencia de escritorio */
         font-size: 3.2em;
       }
 
       .texto-adaptativo {
-        /* Más espacio, mayor fuente para mejorar la lectura */
         font-size: 1.25em;
       }
     }
 
-    /* Breakpoint 3: Escritorio grande (1200px o más) */
     @media (min-width: 1200px) {
 
       body {
@@ -110,7 +101,6 @@
       }
 
       h1 {
-        /* Tamaño máximo para pantallas muy grandes */
         font-size: 4em;
       }
     }
@@ -120,37 +110,29 @@
 @media (min-width: 768px) and (max-width: 991px) {
   body {
     background-color: #ccf2ff;
-    /* Azul claro pálido */
   }
 
   .contenedor {
     width: 70%;
-    /* Cambia a 70% de ancho */
   }
 }
 
-/* Breakpoint 3: Escritorio mediano (992px a 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
   body {
     background-color: #ccffcc;
-    /* Verde claro pálido */
   }
 
   .contenedor {
     width: 50%;
-    /* Cambia a 50% de ancho */
   }
 }
 
-/* Breakpoint 4: Escritorio grande (1200px o más) */
 @media (min-width: 1200px) {
   body {
     background-color: #ffcccc;
-    /* Rosa pálido */
   }
 
   .contenedor {
     width: 30%;
-    /* Cambia a 30% de ancho */
   }
 }
